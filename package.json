@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "concurrently \"ng serve\" \"npm run api\"",
-    "test": "ng test",
+    "test": "ng test --single-run",
     "build": "ng build",
     "api": "json-server --watch db.json"
   },
