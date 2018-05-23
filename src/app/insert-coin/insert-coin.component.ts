@@ -12,13 +12,13 @@ export class InsertCoinComponent implements OnInit {
   constructor(public balanceService: BalanceService) { }
 
   ngOnInit() {
-  	this.balanceService.onBalanceUpdated((balance) => {
-  	  this.coinBalance = balance;
-  	});
+    this.balanceService.onBalanceUpdated((balance) => {
+      this.coinBalance = balance;
+    });
   }
 
   addBalance(amount) {
-  	this.balanceService.addBalance(amount);
+    this.balanceService.addBalance(amount);
   }
 
 }

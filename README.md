@@ -23,21 +23,12 @@ Install dependencies:
 npm install
 ```
 
-Install `json-server`:
-```
-npm install -g json-server
-```
-
-Start the API Server:
-```
-npm run api
-```
-NOTE: Data for the API server is found in `db.json` in the root project folder.
-
 Start the app:
 ```
 npm start
 ```
+NOTE: Data for the API server is found in `db.json` in the root project folder.
+
 
 Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
