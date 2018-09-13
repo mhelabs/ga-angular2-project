@@ -70,11 +70,11 @@ _So that I can know whether my transaction has completed_
 - The machine responds with success message (developer's choice :) ) when item is successfully dispensed.
 - The machine deducts item cost after successfully dispensing item.
 
-Please make liberal use of this [cheatsheet](https://angular.io/docs/ts/latest/guide/cheatsheet.html).
+Please make liberal use of this [cheatsheet](https://angular.io/guide/cheatsheet).
 
 ## References
 
--   [Angular 2 Cheatsheet](https://angular.io/docs/ts/latest/guide/cheatsheet.html)
+-   [Angular Cheatsheet](https://angular.io/guide/cheatsheet)
 -   [Angular-cli github page](https://github.com/angular/angular-cli)
 -   [Official Angular Documentation](https://github.com/angular/angular-cli)
 

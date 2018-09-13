@@ -11,7 +11,7 @@ export class ItemService {
 
   get(): Observable<Response> {
     return this.http.get(this.apiUrl)
-    .map((res:Response) => res.json());
+    .map((res: Response) => res.json());
   }
 
   onItemsRetrieved(callback: any): void {
@@ -32,7 +32,7 @@ export class ItemService {
     headers.append('Content-Type', 'application/json');
     const updateUrl = `${this.apiUrl}/${this.selectedItem.id}`;
     return this.http.put(updateUrl, JSON.stringify(this.selectedItem), { headers })
-    .map((res:Response) => res.json());
+    .map((res: Response) => res.json());
   }
 
   dispenseItem(callback: any): void {
