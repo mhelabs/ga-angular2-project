@@ -1,0 +1,16 @@
+<div *ngIf="inventory">
+  <ul>
+    <li class="itemSelection" *ngFor="let item of inventory">
+    <label >
+      <input type="radio"
+           ng-model="itemName"
+           value="{{item.name}}"
+           ng-value="Item Name"
+           name="inventory">
+           <span class="itemName">{{item.name}}</span><br/>
+           <span>Price: {{item.cost}}</span>
+           <span>Qty Available: {{item.remaining}}</span>
+    </label>
+    </li>
+  </ul>
+</div>
