@@ -1,4 +1,4 @@
-<p class="display -sm-width">BALANCE</p>
-<button class="button -yellow">05c</button>
-<button class="button -blue">10c</button>
-<button class="button -green">25c</button>
+<p class="display -sm-width">BALANCE is {{credit}}</p>
+ <button (click) = "onClick(05)" class="button -yellow">05c</button>
+ <button (click) = "onClick(10)" input [value] = "10" class="button -blue">10c</button> 
+ <button (click) = "onClick(25)" class="button -green">25c</button>
