@@ -17,4 +17,9 @@ export class InsertCoinComponent implements OnInit {
     });
   }
 
+  onButtonClick(amount) {
+    this.balanceService.addBalance(amount);
+    console.log('onButtonClick ran');
+  }
+
 }
