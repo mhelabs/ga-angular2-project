@@ -31,3 +31,12 @@
   color: #3ac569;
   background-color: #000;
 }
+
+.display.-m-width {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  max-width: 200px;
+  min-height: 23px;
+  margin: 0 0 24px;
+}
