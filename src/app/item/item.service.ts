@@ -24,7 +24,7 @@ export class ItemService {
 
   setSelectedItem(item: any): void {
     this.selectedItem = item;
-    console.log(this.selectedItem);
+    console.log("Selected item is ", this.selectedItem);
   }
 
   put(body: any): Observable<Response> {

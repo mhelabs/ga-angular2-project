@@ -9,9 +9,25 @@
   font-family: 'Helvetica Neue', sans-serif;
   font-size: 14px;
   line-height: 24px;
+  display: table-row;
+}
+
+.itemSelection td {
+  padding-right: 10px;
 }
 
 .itemName {
   font-size: 16px;
   font-weight: bold;
+}
+
+.display {
+  overflow: hidden;
+  margin: 5px;
+  padding: 12px 12px;
+  text-align: right;
+  border: 0 none;
+  border-radius: 4px;
+  color: #3ac569;
+  background-color: #000;
 }

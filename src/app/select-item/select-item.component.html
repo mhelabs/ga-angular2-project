@@ -1,16 +1,20 @@
-<div *ngIf="inventory">
-  <ul>
-    <li class="itemSelection" *ngFor="let item of inventory">
-    <label >
-      <input type="radio"
-           ng-model="itemName"
-           value="{{item.name}}"
-           ng-value="Item Name"
-           name="inventory">
-           <span class="itemName">{{item.name}}</span><br/>
-           <span>Price: {{item.cost}}</span>
-           <span>Qty Available: {{item.remaining}}</span>
-    </label>
-    </li>
-  </ul>
-</div>
+<table>
+  <thead class="itemSelection">
+    <td>Item</td>
+    <td>Price</td>
+    <td>Remaining</td>
+  </thead>
+  <tbody>
+    <tr class="itemSelection" *ngFor="let item of inventory">
+        <td class="itemName">
+          <input type="radio" name="inventory"
+            [value]="item.name"
+            (change)="setSelectedItem(item)">
+            {{item.name}}</td>
+        <td>{{item.cost | currency}}</td>
+        <td>{{item.remaining}}</td>
+      </tr>
+  </tbody>
+</table>
+<button class="button -green" (click)="onDispenseItem()">Dispense</button>
+<p class="display -sm-width">{{this.message}}</p>
