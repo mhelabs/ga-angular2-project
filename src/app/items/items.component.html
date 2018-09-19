@@ -1,0 +1,29 @@
+<!-- <h1> Items</h1>
+<div *ngFor = "let item of items">
+<h4>{{item.name}}</h4>
+<p>{{item.cost}}</p>
+</div>
+ -->
+
+ 
+ <!-- RADIO BUTTONS -->
+ <div *ngFor = "let item of items">
+  <label for="item_name_{{item.name}}">
+    <input id="item_name_{{item.name}}" [value]='item.name' type="radio" name="name" [(ngModel)]="radioSelected">
+    {{item.name}} {{item.cost}}
+  </label>
+  <!-- <label for="item_cost_{{item.cost}}">
+    <input id="item_price_{{item.price}}" [value]='item.price' type="radio" name="price" [(ngModel)]="radioSelected">
+    {{item.price}}
+  </label> -->
+</div>
+
+
+<!-- <button (click)='radioFun()'>Checked value of radio button</button>
+<div *ngFor="let enum of enum_details">
+  <label for="enum_answer_{{enum.name}}">
+    <input id="enum_answer_{{enum.name}}" [value]='enum.name' type="radio" name="enums" [(ngModel)]="radioSelected">
+    {{enum.name}}
+  </label>
+</div>
+<button (click)='radioFun()'>Checked value of radio button</button> -->
