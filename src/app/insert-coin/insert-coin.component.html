@@ -1,4 +1,4 @@
-<p class="display -sm-width">BALANCE</p>
-<button class="button -yellow">05c</button>
-<button class="button -blue">10c</button>
-<button class="button -green">25c</button>
+<p class="display -sm-width">{{(this.coinBalance !== 0)? (this.coinBalance | number : '1.2-2') : "Insert Coin"}}</p>
+<button class="button -yellow" (click)="onButtonClick(0.05)">05c</button>
+<button class="button -blue" (click)="onButtonClick(0.10)">10c</button>
+<button class="button -green" (click)="onButtonClick(0.25)">25c</button>

@@ -1,0 +1,20 @@
+<table>
+  <thead class="itemSelection">
+    <td>Item</td>
+    <td>Price</td>
+    <td>Remaining</td>
+  </thead>
+  <tbody>
+    <tr class="itemSelection" *ngFor="let item of inventory">
+        <td class="itemName">
+          <input type="radio" name="inventory"
+            [value]="item.name"
+            (change)="setSelectedItem(item)">
+            {{item.name}}</td>
+        <td>{{item.cost | currency}}</td>
+        <td>{{item.remaining}}</td>
+      </tr>
+  </tbody>
+</table>
+<button class="button -green" (click)="onDispenseItem()">Dispense</button>
+<p class="display -m-width">{{this.message}}</p>
