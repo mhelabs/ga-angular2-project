@@ -37,7 +37,7 @@ export class SelectItemComponent implements OnInit {
       return;
     } else if (!this.itemService.hasRemaining()){
         this.message = "No Inventory Remaining";
-        return
+        return;
     }
     const item = this.itemService.getSelectedItem();
     this.itemService.dispenseItem();
