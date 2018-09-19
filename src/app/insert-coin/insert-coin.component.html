@@ -1,4 +1,7 @@
-<p class="display -sm-width">BALANCE is {{credit}}</p>
+ <p class="display -sm-width"> {{coinBalance==0 ? 'INSERT COIN' : coinBalance}}</p> 
+
  <button (click) = "onClick(05)" class="button -yellow">05c</button>
  <button (click) = "onClick(10)" input [value] = "10" class="button -blue">10c</button> 
  <button (click) = "onClick(25)" class="button -green">25c</button>
+
+  

@@ -21,7 +21,8 @@ export class InsertCoinComponent implements OnInit {
     onClick= function(amount){
     // console.log(this.coinBalance = 5)
     // console.log(this.coinBalance)
-     this.credit = this.coinBalance + amount
-     console.log(`credit is`, this.credit)
-    }
+    this.balanceService.addBalance(amount);
+    console.log(this.coinBalance)
+     }
 }
+ 
