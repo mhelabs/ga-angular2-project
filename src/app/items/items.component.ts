@@ -9,6 +9,7 @@ import { BalanceService } from '../balance/balance.service';
 })
 export class ItemsComponent implements OnInit {
   items: Items[];
+  public selectedItem;
 
   constructor(private itemService: ItemService) {
     console.log(`constructor ran`)
@@ -22,9 +23,18 @@ export class ItemsComponent implements OnInit {
       // console.log(this.items)
 
     })  
+    
   }
-}
+  onSelectionChange(item){
+    // this.selectedItem = item
+    // console.log('you selected', this.selectedItem)  
+    // console.log(`We have only`, this.selectedItem.remaining, `items of`, this.selectedItem.name)
+    this.itemService.setSelectedItem(item)
+    console.log(`you selected`, item.name)
 
+   }
+}
+ 
 interface Items {
   id: number,
   name: string,

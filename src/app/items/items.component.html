@@ -1,31 +1,15 @@
-<!-- <h1> Items</h1>
-<div *ngFor = "let item of items">
-<h4>{{item.name}}</h4>
-<p>{{item.cost}}</p>
-</div>
- -->
 
- 
- <!-- RADIO BUTTONS -->
  <h5>What drink would you like?</h5> 
-
- <div *ngFor = "let item of items">
-  <label for="item_name_{{item.name}}">
-    <input id="item_name_{{item.name}}" [value]='item.name' type="radio" name="name" [(ngModel)]="radioSelected">
-    {{item.name}} ${{item.cost}} Currently in Stock: {{item.remaining}}
-  </label>
-  <!-- <label for="item_cost_{{item.cost}}">
-    <input id="item_price_{{item.price}}" [value]='item.price' type="radio" name="price" [(ngModel)]="radioSelected">
-    {{item.price}}
+ 
+ <!-- <div *ngFor = "let item of items">
+  <label for="{{item.name}}">
+    <input id="{{item.name}}" value={{item.name}} type="radio" name="item.name" [(ngModel)]="item.name"(change)="onSelectionChange(item)">
+    {{item.name}} {{item.cost| currency:'USD':3}} Currently in Stock: {{item.remaining}}
   </label> -->
-</div>
 
 
-<!-- <button (click)='radioFun()'>Checked value of radio button</button>
-<div *ngFor="let enum of enum_details">
-  <label for="enum_answer_{{enum.name}}">
-    <input id="enum_answer_{{enum.name}}" [value]='enum.name' type="radio" name="enums" [(ngModel)]="radioSelected">
-    {{enum.name}}
-  </label>
-</div>
-<button (click)='radioFun()'>Checked value of radio button</button> -->
+  <div *ngFor = "let item of items">
+      <label for="item_name_{{item.name}}">
+        <input id="item_name_{{item.name}}" [value]='item.name' type="radio" name="name" [(ngModel)]="radioSelected" (change)="onSelectionChange(item)">
+        {{item.name}} {{item.cost| currency:'USD':3}} Currently in Stock: {{item.remaining}}
+      </label>

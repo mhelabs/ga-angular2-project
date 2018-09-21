@@ -33,7 +33,8 @@ export class InsertCoinComponent implements OnInit {
     // console.log(this.coinBalance)
     this.balanceService.addBalance(amount);
     console.log(this.coinBalance)
-     }
+       this.balanceService.setBalance = this.coinBalance
+  }
 
 }
  
