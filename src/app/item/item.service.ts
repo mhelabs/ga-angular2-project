@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
-
+ 
+ 
 @Injectable()
 export class ItemService {
   private apiUrl = 'http://localhost:3000/items';
   private selectedItem: any;
   constructor(private http: Http) { }
-
+  
   get(): Observable<Response> {
     return this.http.get(this.apiUrl)
     .map((res: Response) => res.json());
@@ -51,4 +52,5 @@ export class ItemService {
   hasRemaining(): boolean {
     return this.selectedItem && this.selectedItem.remaining > 0;
   }
+  
 }

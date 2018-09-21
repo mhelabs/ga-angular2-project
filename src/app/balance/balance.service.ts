@@ -4,7 +4,7 @@ import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class BalanceService {
-  private balance = 0;
+  public balance = 0;
   private subject: Subject<number> = new Subject<number>();
 
   constructor() { }

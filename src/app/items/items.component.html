@@ -1,0 +1,15 @@
+
+ <h5>What drink would you like?</h5> 
+ 
+ <!-- <div *ngFor = "let item of items">
+  <label for="{{item.name}}">
+    <input id="{{item.name}}" value={{item.name}} type="radio" name="item.name" [(ngModel)]="item.name"(change)="onSelectionChange(item)">
+    {{item.name}} {{item.cost| currency:'USD':3}} Currently in Stock: {{item.remaining}}
+  </label> -->
+
+
+  <div *ngFor = "let item of items">
+      <label for="item_name_{{item.name}}">
+        <input id="item_name_{{item.name}}" [value]='item.name' type="radio" name="name" [(ngModel)]="radioSelected" (change)="onSelectionChange(item)">
+        {{item.name}} {{item.cost| currency:'USD':3}} Currently in Stock: {{item.remaining}}
+      </label>
